@@ -1,0 +1,42 @@
+<!DOCTYPE html> 
+<html> 
+    <head> 
+        <title>Visita al museo geolocalizada</title> 
+        <style> 
+            .gfg { 
+                font-size:40px; 
+                font-weight:bold; 
+                color:#009900; 
+                margin-left:50px; 
+            } 
+            .geeks { 
+                margin-left:150px; 
+            } 
+            p { 
+                font-size:14px; 
+                 
+            } 
+        </style> 
+    </head> 
+      
+    <body> 
+        <h1>Guía virtual</h1>
+        <h3>Casa del Axolote</h3> 
+        <p>Para poder proveerte el servicio de guía virtual, necesitamos tu ubicación.</p> 
+        <button onclick="getlocation()">¡Haz click!</button> 
+        <p id="demo1"></p> 
+		</div>
+        <script> 
+        var variable1 = document.getElementById("demo1"); 
+        function getlocation(){ 
+                navigator.geolocation.getCurrentPosition(showLoc); 
+        } 
+        function showLoc(pos){ 
+                variable1.innerHTML = "Latitud: " + pos.coords.latitude +  
+                "<br>Longitud: " + pos.coords.longitude;  
+            } 
+    </script> 
+        
+    </body> 
+</html>  
+
